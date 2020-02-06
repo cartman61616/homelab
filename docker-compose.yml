@@ -162,9 +162,9 @@ services:
     - 8.8.8.8
     - 8.8.4.4
     volumes:
-      - ${USERDIR_EMP}/docker/transmission:/data
-      - ${USERDIR_EMP}/docker/shared:/shared
-      - ${USERDIR_EMP}/Downloads:/downloads
+      - ${USERDIR_SECOND}/docker/transmission:/data
+      - ${USERDIR_SECOND}/docker/shared:/shared
+      - ${USERDIR_SECOND}/Downloads:/downloads
     environment:
       - OPENVPN_PROVIDER=PIA
       - OPENVPN_USERNAME=${VPN_USR}
@@ -177,8 +177,8 @@ services:
       - TRANSMISSION_RPC_AUTHENTICATION_REQUIRED=true
       - TRANSMISSION_RPC_HOST_WHITELIST="127.0.0.1,10.0.0.*"
       - TRANSMISSION_RPC_PORT="9091"
-      - TRANSMISSION_RPC_PASSWORD=${TRANSMISSION_EMP_RPC_PSWD}
-      - TRANSMISSION_RPC_USERNAME=${TRANSMISSION_EMP_RPC_USR}
+      - TRANSMISSION_RPC_PASSWORD=${TRANSMISSION_SECOND_RPC_PSWD}
+      - TRANSMISSION_RPC_USERNAME=${TRANSMISSION_SECON_RPC_USR}
       - TRANSMISSION_UMASK=002
       - TRANSMISSION_RATIO_LIMIT=1.00
       - TRANSMISSION_RATIO_LIMIT_ENABLED=true
